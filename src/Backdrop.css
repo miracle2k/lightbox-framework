@@ -1,0 +1,11 @@
+.LBFBackdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    z-index: 100;
+
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}

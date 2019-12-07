@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "target": "esnext",
+    "allowJs": false,  
+    "strict": false,
+    // Import non-ES modules as default imports.
+    //"esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
+  },
+  // In production, we have no problem, since the languagetool-player
+  // package will have been compiled to expose separate typings.
+  //
+  // In development, when we use "yarn link" for the player package, 
+  // Typescript will reference the source files of languagetool-player,
+  // and show any type errors there here as well. To stop if from doing so,
+  // there are two options:
+  //
+  // - Make it have a package.json typings attribute.
+  // - Put it as reference here, but note that because Typescript resolves
+  //   the symlink created by yarn link, we have to refer to the real directory:
+  //
+  // Note that in each of those cases we get into trouble if the languagetool-player
+  // library uses a different version of @types/react - in every case, Typescript
+  // will, for the player library, use the one installed on the other side in the
+  // local dev folder.
+  "include": [
+      "typings/*.d.ts",
+      "src/**/*.ts",
+      "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@elsdoerfer/lightbox-framework",
+  "version": "1.0.0",
+  "description": "React composible lightbox",
+  "main": "./dist/index.js",
+  "module": "./src/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/miracle2k/lightbox-framework.git",
+  "author": "Michael Elsdörfer <michael@elsdoerfer.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "prepublish": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=15.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.15",
+    "@types/react-dom": "^16.9.4",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "rollup": "^1.27.8",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.3"
+  }
+}
