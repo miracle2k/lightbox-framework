@@ -11,7 +11,7 @@ type Props = {
 
 export function Lightbox(props: Props) {
   if (!props.isOpen) {
-    return false;
+    return;
   }
 
   let backdrop = <Backdrop
