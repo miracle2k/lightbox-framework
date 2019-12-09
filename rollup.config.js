@@ -2,6 +2,7 @@
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
+import generatePackageJson from 'rollup-plugin-generate-package-json'
 
 
 export default {
@@ -32,9 +33,14 @@ export default {
     copy({
       targets: [
         { src: 'README.md', dest: 'dist' },
-        { src: 'package.json', dest: 'dist' },
         { src: 'src/defaultStyle.css', dest: 'dist' },
       ]
+    }),
+    generatePackageJson({
+      baseContents: (pkg) => ({
+        ...pkg,
+        scripts: {}
+      })
     })
   ]
 };

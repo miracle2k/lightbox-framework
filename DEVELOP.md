@@ -1,4 +1,5 @@
-Based on https://github.com/kriasoft/babel-starter-kit/:
+The build creates a new package layout within "dist".
+We then publish that package.
 
 ```sh
 yarn version
