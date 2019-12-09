@@ -44,3 +44,9 @@
     margin-top: -20px;
     top: 50%;
 }
+
+.LBFCloseButton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
